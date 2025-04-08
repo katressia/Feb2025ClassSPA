@@ -1,5 +1,6 @@
-import pizzas from "./controllers/pizzas.js";
+import customers from "./controllers/customers.js";
 // 'Import' the Express module instead of http
+import pizzas from "./controllers/pizzas.js";
 import express from "express";
 
 import dotenv from "dotenv";
@@ -97,7 +98,9 @@ app.get("/weather/:city", (request, response) => {
   });
 });
 
+// eslint-disable-next-line no-undef
 app.use("/pizzas", pizzas);
+app.use("/customers", customers);
 
 // Tell the Express app to start listening
 // Let the humans know I am running and listening on 4040
